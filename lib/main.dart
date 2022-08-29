@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'Answer.dart';
+import 'Question.dart';
 
 void main() {
   runApp(PersonalityJudge());
@@ -26,26 +28,33 @@ class HomePage extends State<QuizClass> {
   String _appName = "";
   int questionsCntr = 0;
 
-  List<String> Questions = [
-    "What's your favorite color?",
-    "What's your favorite animal?"
+  List<Map> questionsList = [
+    {
+      "Question": 'What is your favorite color',
+      "Answer": ["Red", "Black", "Green", "Blue", "White"]
+    },
+    {
+      "Question": "What is your favorite pet",
+      "Answer": ["Cats", "Dogs", "Birds"]
+    },
+    {
+      "Question": "What is your favorite hobby",
+      "Answer": ["Reading", "Writing", "Driving", "Chess"]
+    }
   ];
   void TheQuestionSolutions() {
     // this will print it in the console not in the UI but we can the properties of the class
     // in order to be able to use dynamic values
     setState(() {
-      questionsCntr = (questionsCntr + 1) % 2;
+      questionsCntr = (questionsCntr + 1) % 3;
     });
   }
-
-  void answerQuestion1() => _appName += '1';
-  void answerQuestion2() => _appName += '2';
-  void answerQuestion3() => _appName += '3';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: Text(
             "Personality Quiz!",
             style: TextStyle(
@@ -61,30 +70,18 @@ class HomePage extends State<QuizClass> {
           ),
         ),
         drawer: Drawer(),
-        body: Column(
-          children: [
-            Text(
-              Questions[questionsCntr],
-              style: TextStyle(fontSize: 20, color: Colors.amber),
-            ),
-            RaisedButton(
-              child: Text('Answer 1'),
-              onPressed:
-                  answerQuestion1, // ehna bnb3t esm el function bs msh bn3mlha call, 34an fe ay w2t ndos el onpress hya el btro7 te3ml excute
-            ),
-            RaisedButton(
-              child: Text('Answer 2'),
-              onPressed: (() => {answerQuestion2()}),
-            ),
-            RaisedButton(
-              child: Text('Answer 3'),
-              onPressed: ((() => answerQuestion3())),
-            ),
-            RaisedButton(
-              child: Text('The Solution'),
-              onPressed: ((() => TheQuestionSolutions())),
-            ),
-          ],
+        body: Container(
+          child: Column(
+            children: [
+              Question(questionsList[questionsCntr]["Question"]),
+              // i need list of answers dynamicly
+              ...(questionsList[questionsCntr]["Answer"] as List<String>)
+                  .map((ans) {
+                return Answer(ans, TheQuestionSolutions);
+              }).toList(),
+            ],
+          ),
+          decoration: BoxDecoration(color: Colors.blueGrey),
         ));
   }
 }
