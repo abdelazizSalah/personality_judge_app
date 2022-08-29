@@ -16,11 +16,7 @@ class PersonalityJudge extends StatelessWidget {
 class QuizClass extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
-
-    //this is how we also connnect the two widgets together :D
     return HomePage();
-    // this function must return state widget
   }
 }
 
