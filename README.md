@@ -36,6 +36,9 @@
 ![FilesStructure](./PersonalityQuiz.jpeg)
 
 # ScreenShots
+ ### **Main Page**
+* <img src="./images/MainPage.jpeg" alt="Main Page" width="200"/>
+ -------
  ### **First Question**
 * <img src="./images/FirstQues.jpeg" alt="FirstQuestion" width="200"/>
  -------
