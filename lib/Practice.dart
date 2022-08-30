@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:personality_judge_app/main.dart';
 
 void main() {
   runApp(PersonalityJudge());
