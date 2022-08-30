@@ -37,16 +37,16 @@
 
 # ScreenShots
  ### **First Question**
-* <img src="./FirstQues.jpeg" alt="drawing" width="200"/>
+* <img src="./images/FirstQues.jpeg" alt="FirstQuestion" width="200"/>
  -------
  ### **Second Question**
-* <img src="./SecondQues.jpeg" alt="drawing" width="200"/>
+* <img src="./images/SecondQues.jpeg" alt="Second Question" width="200"/>
  -------
  ### **Third Question**
-* <img src="./ThirdQues.jpeg" alt="drawing" width="200"/>
+* <img src="./images/ThirdQues.jpeg" alt="Third Question" width="200"/>
  -------
  ### **Fourth Question**
-* <img src="./FourthQues.jpeg" alt="drawing" width="200"/>
+* <img src="./images/FourthQues.jpeg" alt="Fourth Question" width="200"/>
  -------
  ### **The result**
-* <img src="./Result.jpeg" alt="drawing" width="200"/>
+* <img src="./images/Result.jpeg" alt="The Result" width="200"/>
