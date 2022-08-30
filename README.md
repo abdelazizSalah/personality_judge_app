@@ -36,12 +36,17 @@
 ![FilesStructure](./PersonalityQuiz.jpeg)
 
 # ScreenShots
-* ![FirstQuestion](./FirstQues.jpeg) 
+ ### **First Question**
+* <img src="./FirstQues.jpeg" alt="drawing" width="200"/>
  -------
-* ![SecondQuestion](./SecondQues.jpeg)
+ ### **Second Question**
+* <img src="./SecondQues.jpeg" alt="drawing" width="200"/>
  -------
-* ![ThirdQuestion](./ThirdQues.jpeg)
+ ### **Third Question**
+* <img src="./ThirdQues.jpeg" alt="drawing" width="200"/>
  -------
-* ![ForthQuestion](./FourthQues.jpeg)
+ ### **Fourth Question**
+* <img src="./FourthQues.jpeg" alt="drawing" width="200"/>
  -------
-* ![Result](./Result.jpeg)
+ ### **The result**
+* <img src="./Result.jpeg" alt="drawing" width="200"/>
