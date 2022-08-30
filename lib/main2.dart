@@ -23,6 +23,7 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   //backend logic
   //1- we need to create the counter of the items
+  bool start = false;
   int questionCntr = 0;
   int totalScore = 0;
   //2- we need to create the list of the questions
@@ -80,6 +81,13 @@ class _MainPageState extends State<MainPage> {
     setState(() {
       totalScore = 0;
       questionCntr = 0;
+      start = false;
+    });
+  }
+
+  void StartTheQuiz() {
+    setState(() {
+      start = true;
     });
   }
 
@@ -99,13 +107,52 @@ class _MainPageState extends State<MainPage> {
             ),
           ),
         ),
-        body: questionCntr < Questions.length
+        body: start == false
             ? Container(
-                margin: EdgeInsets.symmetric(vertical: 50),
-                child: Quiz(Questions[questionCntr], evaluater))
-            : Container(
-                margin: EdgeInsets.symmetric(vertical: 5),
-                child: Center(child: Result(totalScore, restartQuiz)),
-              ));
+                height: 700,
+                child: Center(
+                    child: Column(children: [
+                  Container(
+                      margin: EdgeInsets.only(top: 250),
+                      padding: EdgeInsets.all(10),
+                      child: Text(
+                        "Let's Get Started?",
+                        style: TextStyle(
+                            color: Colors.amber,
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                            shadows: [
+                              Shadow(
+                                  blurRadius: 50,
+                                  color: Colors.amber,
+                                  offset: Offset(20, 10))
+                            ]),
+                      )),
+                  Container(
+                    width: 200,
+                    height: 50,
+                    child: RaisedButton(
+                      color: Colors.blueAccent,
+                      onPressed: StartTheQuiz,
+                      child: Text(
+                        "Start",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            shadows: [
+                              Shadow(blurRadius: 50, color: Colors.white)
+                            ]),
+                      ),
+                    ),
+                  )
+                ])))
+            : questionCntr < Questions.length
+                ? Container(
+                    margin: EdgeInsets.symmetric(vertical: 50),
+                    child: Quiz(Questions[questionCntr], evaluater))
+                : Container(
+                    margin: EdgeInsets.symmetric(vertical: 5),
+                    child: Center(child: Result(totalScore, restartQuiz)),
+                  ));
   }
 }
