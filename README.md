@@ -33,7 +33,11 @@
 * **run the main2.dart file**
 
 # Files Structure
+<<<<<<< HEAD
  <img src="./images/PersonalityQuiz.jpeg" alt="Main Page" width="550"/>
+=======
+<img src="./images./PersonalityQuiz.jpeg" alt="Main Page" width="200"/>
+>>>>>>> 96442502e43f4e5f811d8756f1ce9911d6b43d4f
 
 # ScreenShots
  ### **Main Page**
