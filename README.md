@@ -33,7 +33,7 @@
 * **run the main2.dart file**
 
 # Files Structure
-![FilesStructure](./PersonalityQuiz.jpeg)
+<img src="./images./PersonalityQuiz.jpeg" alt="Main Page" width="200"/>
 
 # ScreenShots
  ### **Main Page**
