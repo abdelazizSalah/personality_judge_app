@@ -28,7 +28,10 @@
    1. Android Studio
    2. Flutter 
    3. Dart  
-
+4. **Make sure that flutter is working properly**
+    > flutter doctor
+5. __Run the Program__
+    >flutter run
 ## Running 
 * **run the main2.dart file**
 
