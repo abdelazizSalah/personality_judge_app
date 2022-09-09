@@ -13,9 +13,10 @@ class Answer extends StatelessWidget {
       width: 300,
       height: 50,
       margin: EdgeInsets.all(20),
-      child: RaisedButton(
+      child: ElevatedButton(
           onPressed: functionHandler,
-          color: Colors.blueAccent,
+          style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(Colors.blueAccent)),
           child: Text(
             Ans,
             style: TextStyle(

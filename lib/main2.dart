@@ -11,6 +11,7 @@ class PersonalityJudge extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: MainPage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -27,7 +28,7 @@ class _MainPageState extends State<MainPage> {
   int questionCntr = 0;
   int totalScore = 0;
   //2- we need to create the list of the questions
-  List<Map> Questions = [
+  List<Map<String, Object>> Questions = [
     {
       "Question": "What is your favorite color?",
       "Answer": [
@@ -131,8 +132,10 @@ class _MainPageState extends State<MainPage> {
                   Container(
                     width: 200,
                     height: 50,
-                    child: RaisedButton(
-                      color: Colors.blueAccent,
+                    child: ElevatedButton(
+                      style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.blueAccent)),
                       onPressed: StartTheQuiz,
                       child: Text(
                         "Start",
@@ -149,7 +152,9 @@ class _MainPageState extends State<MainPage> {
             : questionCntr < Questions.length
                 ? Container(
                     margin: EdgeInsets.symmetric(vertical: 50),
-                    child: Quiz(Questions[questionCntr], evaluater))
+                    child: Quiz(
+                        question: Questions[questionCntr],
+                        functionHandler: evaluater))
                 : Container(
                     margin: EdgeInsets.symmetric(vertical: 5),
                     child: Center(child: Result(totalScore, restartQuiz)),

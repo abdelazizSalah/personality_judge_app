@@ -64,10 +64,10 @@ class myApp extends State<PersonalityTest> {
           style: TextStyle(
               fontSize: 20, fontWeight: FontWeight.bold, color: Colors.amber),
         ),
-        RaisedButton(child: Text("Answer1"), onPressed: Ans1PressedKey),
-        RaisedButton(child: Text("Answer2"), onPressed: Ans2PressedKey),
-        RaisedButton(child: Text("Answer3"), onPressed: Ans3PressedKey),
-        RaisedButton(
+        ElevatedButton(child: Text("Answer1"), onPressed: Ans1PressedKey),
+        ElevatedButton(child: Text("Answer2"), onPressed: Ans2PressedKey),
+        ElevatedButton(child: Text("Answer3"), onPressed: Ans3PressedKey),
+        ElevatedButton(
             child: Text("The Solution"), onPressed: SolutionPressedKey),
       ]),
     );

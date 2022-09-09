@@ -11,8 +11,9 @@ class Answer2 extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 20),
       child: Center(
-          child: RaisedButton(
-        color: Colors.blue,
+          child: ElevatedButton(
+        style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all(Colors.blue)),
         onPressed: functionHandler,
         child: Text(
           Ans,
