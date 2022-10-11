@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
-import 'Quiz.dart';
-import 'Result.dart';
+import './Widgets/Answer.dart';
+import './Widgets/Result.dart';
+import 'Widgets/Quiz.dart';
 
 void main() {
   runApp(PersonalityJudge());

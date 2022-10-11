@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:personality_judge_app/Answer.dart';
+import './Answer.dart';
 import 'Question.dart';
 
 class Quiz extends StatelessWidget {
